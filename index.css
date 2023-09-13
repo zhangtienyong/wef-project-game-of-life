@@ -1,0 +1,146 @@
+body {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding-top: 70px;
+    background-color: #353353;;
+  }
+
+  ul {
+    list-style-type: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #353353;
+    padding: 20px 0;
+    border-bottom: solid 1px #4d4b67;
+}
+
+.navbar a {
+    color: #f9f9ff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #FFD15C;
+}
+
+.navbar-nav li:not(:last-child) {
+    padding-right: 48px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FFD15C;
+}
+
+/* Section Home */
+.home-page {
+    color: #f9f9ff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-hand {
+    color: #FFD15C;
+}
+
+.btn-openlink {
+    color: #f9f9ff;
+    background: #FF4C60;
+    border-radius: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 12px 32px;
+    text-decoration: none;
+    margin: 30px 0px 0px 0px;
+}
+
+.btn-openlink i {
+    padding-right: 10px;
+}
+
+.logo-image {
+    width: 200px;
+    height: 105px;
+    margin: 30px 0px 50px 0px;
+}
+
+/* Section About */
+.about-page {
+    color: #f9f9ff;
+}
+
+.myimg {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f9f9ff;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    margin: 60px 0px 60px 0px;
+}
+
+.about-card {
+    background-color: #f9f9ff;
+    border-radius: 20px;
+    padding: 20px;
+    color: #454360;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card-content {
+    display: flex;
+}
+
+.content-list ul li {
+    display: flex;
+    align-items: center;
+
+}
+
+.content-list ul li i {
+    margin-right: 20px;
+}
+
+.myimg {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f9f9ff;
+    overflow: hidden;
+}
+
+.btn-aboutme {
+    color: #f9f9ff;
+    background: #FFD15C;
+    border-radius: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 12px 32px;
+    text-decoration: none;
+    margin: 30px 0px 0px 0px;
+}
+
+/* Game Page */
+.game-name {
+    color: #f9f9ff;
+    text-align: center;
+}
+
+footer.footer {
+    background-color:#353353;
+    padding: 30px 0;
+    text-align: center;
+    border-top: solid 1px #f9f9ff;
+    color: #f9f9ff;
+}
