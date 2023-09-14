@@ -2,28 +2,25 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #f0f0f0; /* Set a background color for the body */
+  background-color: #f0f0f0;
 }
 
-/* Center the content horizontally and vertically */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Use the full viewport height */
+  height: 100vh;
 }
 
-/* Set a max-width for the content container */
 .content {
   padding: 20px;
-  background-color: #ffffff; /* Add a background color for content */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for content */
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 #canvas {
-  margin: 0 auto; /* Center-align the canvas horizontally */
-  display: block;
-  background-color: #ffffff; /* Add a background color for the canvas */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for the canvas */
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

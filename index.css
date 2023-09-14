@@ -13,7 +13,7 @@ body {
 .navbar {
     background-color: #353353;
     padding: 20px 0;
-    border-bottom: solid 1px #4d4b67;
+    border-bottom: solid 1px #f9f9ff;
 }
 
 .navbar a {
@@ -34,21 +34,21 @@ body {
     color: #FFD15C;
 }
 
-/* Section Home */
-.home-page {
-    color: #f9f9ff;
-    height: 100vh;
+/* Main Section */
+.homepage {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: #f9f9ff;
 }
 
 .fa-hand {
     color: #FFD15C;
 }
 
-.btn-openlink {
+.btn-game {
     color: #f9f9ff;
     background: #FF4C60;
     border-radius: 60px;
@@ -60,87 +60,61 @@ body {
     margin: 30px 0px 0px 0px;
 }
 
-.btn-openlink i {
-    padding-right: 10px;
+.aboutpage {
+    padding: 30px 0px 30px 0px;
 }
 
-.logo-image {
-    width: 200px;
-    height: 105px;
-    margin: 30px 0px 50px 0px;
-}
-
-/* Section About */
-.about-page {
+.about-header {
     color: #f9f9ff;
-}
-
-.myimg {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    border: 5px solid #f9f9ff;
-    overflow: hidden;
-}
-
-.about-container {
     display: flex;
-    margin: 60px 0px 60px 0px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-card {
-    background-color: #f9f9ff;
-    border-radius: 20px;
-    padding: 20px;
-    color: #454360;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.card-content {
     display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 
-.content-list ul li {
-    display: flex;
-    align-items: center;
-
-}
-
-.content-list ul li i {
-    margin-right: 20px;
-}
-
-.myimg {
+.card-image {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    border: 5px solid #f9f9ff;
+    border: #FF4C60 solid 2px;
     overflow: hidden;
+    margin: 30px 0px 30px 0px;
 }
 
-.btn-aboutme {
-    color: #f9f9ff;
-    background: #FFD15C;
-    border-radius: 60px;
+.card-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    border: #FF4C60 solid 2px;
+    border-radius: 20px;
+    background-color: #f9f9ff;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 1;
-    padding: 12px 32px;
-    text-decoration: none;
-    margin: 30px 0px 0px 0px;
+    font-weight: 500;
 }
 
-/* Game Page */
-.game-name {
-    color: #f9f9ff;
-    text-align: center;
+.content-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 0px;
+    width: 30%;
+    border: #FF4C60 solid 2px;
+    border-radius: 20px;
+    background-color: #f9f9ff;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-footer.footer {
-    background-color:#353353;
+footer {
     padding: 30px 0;
     text-align: center;
-    border-top: solid 1px #f9f9ff;
+    border-top: solid 1px;
     color: #f9f9ff;
 }

@@ -6,34 +6,30 @@ let rows;
 let currentBoard;
 let nextBoard;
 
-// Control Speed of the Game of Life with a Framerate Slider
 let framerateSlider;
 
-// Start Stop
+
 let isRunning = false;
 let startButton;
 let stopButton;
 let resetButton;
 let randomizeButton;
 
-// Define colors for different cell states
-let aliveColor; // Red for alive cells
-let deadColor; // White for dead cells
-let stableColor; // Dark gray for stable cells
+let aliveColor;
+let deadColor; 
+let stableColor; 
 
-// Pattern
 let patternSelector;
 let applyPatternButton;
 
-// Setup
+
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight - 100);
   canvas.parent(document.querySelector("#canvas"));
 
-  // Initialize colors
-  aliveColor = color(255, 0, 0); // Red for alive cells
-  deadColor = color(255); // White for dead cells
-  stableColor = color(100); // Dark gray for stable cells
+  aliveColor = color(255, 0, 0);
+  deadColor = color(255);
+  stableColor = color(100);
 
   columns = floor(width / unitLength);
   rows = floor(height / unitLength);
@@ -89,35 +85,33 @@ function updateFramerate() {
 
 function startGame() {
   isRunning = true;
-  loop(); // Start the game loop
+  loop();
 }
 
 function stopGame() {
   isRunning = false;
-  noLoop(); // Stop the game loop
+  noLoop();
 }
 
 function resetGame() {
   isRunning = false;
-  noLoop(); // Stop the game loop
-  init(); // Reset the game state
+  noLoop();
+  init();
 }
 
 function randomizeBoard() {
-  // Implement logic to randomly populate currentBoard with different colors
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
       const randomValue = random();
       if (randomValue > 0.7) {
-        currentBoard[i][j] = 1; // Alive (red)
+        currentBoard[i][j] = 1;
       } else {
-        currentBoard[i][j] = 0; // Dead (white)
+        currentBoard[i][j] = 0;
       }
     }
   }
 }
 
-// Initialize/reset the board state
 function init() {
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
@@ -127,7 +121,6 @@ function init() {
   }
 }
 
-// Draw
 function draw() {
   background(255);
   generate();
@@ -135,7 +128,6 @@ function draw() {
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
       if (currentBoard[i][j] == 1) {
-        // Check if the cell is stable (not changing state)
         const isStable = currentBoard[i][j] === nextBoard[i][j];
         fill(isStable ? stableColor : aliveColor);
       } else {
@@ -147,7 +139,6 @@ function draw() {
   }
 }
 
-// Generate
 function generate() {
   for (let x = 0; x < columns; x++) {
     for (let y = 0; y < rows; y++) {
@@ -162,7 +153,6 @@ function generate() {
         }
       }
 
-      // Rules of Life
       if (currentBoard[x][y] == 1 && neighbors < 2) {
         nextBoard[x][y] = 0;
       } else if (currentBoard[x][y] == 1 && neighbors > 3) {
@@ -178,9 +168,7 @@ function generate() {
   [currentBoard, nextBoard] = [nextBoard, currentBoard];
 }
 
-// When mouse is dragged
 function mouseDragged() {
-  //If the mouse coordinate is outside the board
   if (mouseX > unitLength * columns || mouseY > unitLength * rows) {
     return;
   }
@@ -192,23 +180,21 @@ function mouseDragged() {
   rect(x * unitLength, y * unitLength, unitLength, unitLength);
 }
 
-// When mouse is pressed
 function mousePressed() {
   if (!isRunning) {
-    loop(); // Start the game loop
+    loop();
   }
 }
 
-// When mouse is released
+
 function mouseReleased() {
   if (!isRunning) {
-    noLoop(); // Stop the game loop
+    noLoop();
   }
 }
 
 function applySelectedPattern() {
   const selectedPattern = patternSelector.value();
-  // Implement logic to place the selected pattern on the board
   switch (selectedPattern) {
     case 'random':
       randomizeBoard();
@@ -223,9 +209,8 @@ function applySelectedPattern() {
 }
 
 function applyGliderPattern() {
-  // Glider pattern
-  // This pattern moves diagonally across the board
-  currentBoard[2][1] = 1; // Red cell
+
+  currentBoard[2][1] = 1;
   currentBoard[3][2] = 1;
   currentBoard[1][3] = 1;
   currentBoard[2][3] = 1;
@@ -233,9 +218,7 @@ function applyGliderPattern() {
 }
 
 function applyLWSSPattern() {
-  // Lightweight Spaceship (LWSS) pattern
-  // This pattern moves horizontally across the board
-  currentBoard[2][1] = 1; // Red cell
+  currentBoard[2][1] = 1;
   currentBoard[5][1] = 1;
   currentBoard[6][2] = 1;
   currentBoard[6][3] = 1;

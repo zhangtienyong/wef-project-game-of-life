@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="game.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <div class="header">GAME OF LIFE</div>
-        <div id="canvas"></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="header">GAME OF LIFE</div>
+      <div id="canvas"></div>
 
-    <!-- Add a slider to control the framerate -->
-    <div class="framerate-control">
-      <label for="framerate-slider">Framerate:</label>
-      <input
-        type="range"
-        id="framerate-slider"
-        min="1"
-        max="60"
-        value="5"
-      />
-      <span id="framerate-value">30 FPS</span>
-    </div>
-
-    <!-- Add Start Stop Reset and randomization buttons -->
-    <div class="control-buttons">
-      <button id="start-button">Start</button>
-      <button id="stop-button">Stop</button>
-      <button id="reset-button">Reset</button>
-      <button id="randomize-button">Randomize</button>
-    </div>
-
-    <!-- Add a dropdown for pattern selection -->
-    <select id="pattern-selector">
-      <option value="random">Random</option>
-      <option value="glider">Glider</option>
-      <option value="lwss">Lightweight Spaceship</option>
-    </select>
-    <button id="apply-pattern-button">Apply Pattern</button>
+      <!-- Add a slider to control the framerate -->
+      <div class="framerate-control">
+        <label for="framerate-slider">Framerate:</label>
+        <input
+          type="range"
+          id="framerate-slider"
+          min="1"
+          max="60"
+          value="1"
+        />
+        <span id="framerate-value">30 FPS</span>
       </div>
+
+      <!-- Add Start Stop Reset and randomization buttons -->
+      <div class="control-buttons">
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <button id="reset-button">Reset</button>
+        <button id="randomize-button">Randomize</button>
+      </div>
+
+      <!-- Add a dropdown for pattern selection -->
+      <select id="pattern-selector">
+        <option value="random">Random</option>
+        <option value="glider">Glider</option>
+        <option value="lwss">Lightweight Spaceship</option>
+      </select>
+      <button id="apply-pattern-button">Apply Pattern</button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
-    <script src="game.js"></script>
-  </body>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+  <script src="game.js"></script>
+</body>
 </html>
